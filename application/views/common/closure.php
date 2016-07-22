@@ -6,5 +6,14 @@
     <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?php echo base_url(); ?>js/ie10-viewport-bug-workaround.js"></script>
+	<script src="<?php echo base_url(); ?>js/ekko-lightbox.min.js"></script>
+	<script type="text/javascript">
+	$("document").ready(function(){
+		$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+			event.preventDefault();
+			return $(this).ekkoLightbox();
+		});
+	})
+	</script>	
   </body>
 </html>
