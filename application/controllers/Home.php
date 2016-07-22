@@ -3,24 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	private $data;
+	
+	public function __construct()
+	{
+		parent::__construct();
+		$this->data['controller'] = $this->uri->segment(1,"home");
+		$this->data['method'] = $this->uri->segment(2,"index");
+	}
+	
 	public function index()
 	{
-		$data['pages']=array(
+		$this->data['pages']=array(
 			array('title'=>'Blog', 'url'=>'blog','img'=>'blog.jpg'),
 			array('title'=>'Carousel', 'url'=>'carousel','img'=>'carousel.jpg'),
 			array('title'=>'Cover', 'url'=>'cover','img'=>'cover.jpg'),
@@ -39,32 +33,31 @@ class Home extends CI_Controller {
 			array('title'=>'starter-template', 'url'=>'starter_template','img'=>'starter-template.jpg'),
 			array('title'=>'sticky-footer', 'url'=>'sticky_footer','img'=>'sticky-footer.jpg'),
 			array('title'=>'sticky-footer-navbar', 'url'=>'sticky_footer_navbar','img'=>'sticky-footer-navbar.jpg'),
-			array('title'=>'theme', 'url'=>'theme','img'=>'theme.jpg'),
-			
+			array('title'=>'theme', 'url'=>'theme','img'=>'theme.jpg')
 		);
-		$this->load->view('common/header');
-		$this->load->view('common/nav');
-		$this->load->view('summary',$data);
-		$this->load->view('common/footer');
-		$this->load->view('common/closure');
+		$this->load->view('common/header',$this->data);
+		$this->load->view('common/nav',$this->data);
+		$this->load->view('summary',$this->data);
+		$this->load->view('common/footer',$this->data);
+		$this->load->view('common/closure',$this->data);
 	}
 	
 	public function blog()
 	{
-		$this->load->view('common/header');
-		$this->load->view('common/nav');
-		$this->load->view('sample_content');
-		$this->load->view('common/footer');
-		$this->load->view('common/closure');
+		$this->load->view('common/header',$this->data);
+		$this->load->view('common/nav',$this->data);
+		$this->load->view('samples/blog',$this->data);
+		$this->load->view('common/footer',$this->data);
+		$this->load->view('common/closure',$this->data);
 	}	
 	
 	public function carousel()
 	{
-		$this->load->view('common/header');
-		$this->load->view('common/nav');
-		$this->load->view('sample_content');
-		$this->load->view('common/footer');
-		$this->load->view('common/closure');
+		$this->load->view('common/header',$this->data);
+		$this->load->view('common/nav',$this->data);
+		$this->load->view('samples/carousel',$this->data);
+		$this->load->view('common/footer',$this->data);
+		$this->load->view('common/closure',$this->data);
 	}	
 	
 	public function cover()

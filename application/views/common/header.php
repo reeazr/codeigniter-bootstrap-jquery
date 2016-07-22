@@ -19,6 +19,13 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>css/sticky-footer-navbar.css" rel="stylesheet">
+	
+	<!-- AUTO LOADER FOR CSS -->
+	<!-- Looks for a css whose name matches the controller + method and loads it if found -->
+	<?php $filename = "css/".$controller."_".$method.".css"; ?>
+	<?php if(file_exists($filename)): ?>
+	<link href="<?php echo base_url($filename); ?>" rel="stylesheet">
+	<?php endif; ?>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
