@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="<?php echo base_url(); ?>favicon.ico">
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
+    <title><?php echo $pageTitle; ?> Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
@@ -18,11 +18,11 @@
     <link href="<?php echo base_url(); ?>css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url(); ?>css/sticky-footer-navbar.css" rel="stylesheet">
+    <!--<link href="<?php echo base_url(); ?>css/sticky-footer-navbar.css" rel="stylesheet">-->
 	
 	<!-- AUTO LOADER FOR CSS -->
 	<!-- Looks for a css whose name matches the controller + method and loads it if found -->
-	<?php $filename = "css/".$controller."_".$method.".css"; ?>
+	<?php $filename = "css/".$controller."/".$method.".css"; ?>
 	<?php if(file_exists($filename)): ?>
 	<link href="<?php echo base_url($filename); ?>" rel="stylesheet">
 	<?php endif; ?>
