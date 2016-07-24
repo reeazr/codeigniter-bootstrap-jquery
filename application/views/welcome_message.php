@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Welcome to CodeIgniter, Bootstrap and JQuery</title>
 
 	<style type="text/css">
 
@@ -68,11 +68,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>Welcome to CodeIgniter, Bootstrap and JQuery!</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
+		<p>This is a combination of CodeIgniter, Bootstrap and JQuery already packed for you. This will quickstart your projects instead of manually doing this same tasks over and over! Here's what has been packed for you:</p>
+		<code>
+		<ul>
+		<li>CodeIgniter v3.0.6</li>
+		<li>Bootstrap 3.3.6</li>
+		<li>jQuery v1.10.2</li>
+		</ul>
+		</code>
 		<p>If you would like to edit this page you'll find it located at:</p>
 		<code>application/views/welcome_message.php</code>
 
