@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="<?php echo base_url(); ?>favicon.ico">
 
-    <title><?php echo $pageTitle; ?> Template for Bootstrap</title>
+    <title><?php echo $pageTitle; ?> | Website's Name</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
