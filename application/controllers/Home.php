@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		parent::__construct();
 		$this->data['controller'] = $this->uri->segment(1,"home");
 		$this->data['method'] = $this->uri->segment(2,"index");
-		$this->data['pageTitle'] = "CodeIgniter Bootstrap";
+		$this->data['pageTitle'] = "";
 	}
 	
 	public function index()
@@ -134,7 +134,7 @@ class Home extends CI_Controller {
 	
 	public function signin()
 	{
-		$this->data['pageTitle'] = "Carousel Template for Bootstrap";
+		$this->data['pageTitle'] = "Sign In";
 		$this->load->view('common/header',$this->data);
 		$this->load->view('samples/signin',$this->data);
 		$this->load->view('common/closure',$this->data);
