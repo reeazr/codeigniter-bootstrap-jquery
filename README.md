@@ -16,3 +16,5 @@ and change Website's Name to your site's name
 >	'password' => '',
 >	'database' => '',
   
+By default, the application requires authentication. To disable this feature, edit application/config/config.php and set
+>$config['enable_hooks'] = FALSE;
